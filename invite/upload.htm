@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="/static/dropzone.js"></script>
+    <link rel="stylesheet" href="/static/dropzone.css" />
+</head>
+
+<body>
+    <form action="/upload" class="dropzone" id="myAwesomeDropzone"></form>
+    <br>
+    <span id="msg">The file has been uploaded and is publicly available at the following URL: <a id="href"></a></span>
+    <script>
+        Dropzone.options.myAwesomeDropzone = {  init: function() { this.on("success", function(file) { 
+            document.all["href"].href = "https://mvatlv.blob.core.windows.net/invites/" + file.name;
+            document.all["href"].innerText = "https://mvatlv.blob.core.windows.net/invites/" + file.name;
+          }); 
+        }};
+    </script>
+</body>
+
+</html>
