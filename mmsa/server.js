@@ -67,13 +67,13 @@ app.use('/mmsa/api', router);
 
 app.get('*.css', function(req, res) {
         console.log('sending css');
-        res.sendfile('./css.css'); 
+        res.sendfile(__dirname + '/css.css'); 
     });
 
 
  app.get('*', function(req, res) {
         console.log('sending index.html');
-        res.sendfile('./index.html'); // load the single view file (angular will handle the page changes on the front-end)
+        res.sendfile(__dirname + '/index.html'); // load the single view file (angular will handle the page changes on the front-end)
     });
 
 // START THE SERVER
