@@ -63,7 +63,7 @@ router.route('/sections/:section_id/:question_id')
 
 // REGISTER OUR ROUTES -------------------------------
 // all of our routes will be prefixed with /api
-app.use('/api', router);
+app.use('./api', router);
 
 app.get('*.css', function(req, res) {
         console.log('sending css');
