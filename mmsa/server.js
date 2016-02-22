@@ -70,6 +70,10 @@ app.get('*.css', function(req, res) {
         res.sendfile(__dirname + '/css.css'); 
     });
 
+app.get('model', function(req, res) {
+        console.log('sending css');
+        res.sendfile(__dirname + '/model.js'); 
+    });
 
  app.get('*', function(req, res) {
         console.log('sending index.html');
